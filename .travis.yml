@@ -1,7 +1,12 @@
 language: python
 python:
-  - "2.7"
-# command to install dependencies 
-install: "pip install -r requirements.txt"
-# command to run tests
+- '2.7'
+install: pip install -r requirements.txt
 script: nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: CAa9qnQENDOvPL8wVwPmW4/mVDdIzWeppuIbmelyLdOM2s2UYI+Ow7wIk/JeFCDhYNRB5An/j8QSkpHv2Nssgo6bixEOILfHh4Fr7XF50wm1EA7oN05BAS3QEwc1nxopjCYa6PkPa6O7zD/L56fR4JjhXPeAk2omNyc2RtX1ngTONSiqF4UQwL8WKj8wqPec09q3eDPVeqcMBaCr2yt3zSOD9rCsFq8BHDGi9AXE+SD4Upj5yHj7MjCraCnE98T9pwO+xitxNYJ45fBvNsUdRGKRQZWggKnuKG/UDklPh5AvHb4CxZfOBE4XumNskr2ncavfjdfzDLnmAAC9OtsWt5LLlRa2/KDxv6CcZHlqPj1KnG5DGtveasVzGOX4QpKyvcER5gVLuyx3noVrStvAxy0JISvG610E1xZqPCkWO/ESr459zVwbMpPMT91ZT9S2KpSFldTmbx2AP9HxeeeQqCOevF4WFQEdPOnd6Nq0vHMfkjcvRDopHK7Eflws6Wr3MkZwrsI0TaK7bNArGugKNTrxT3sc6g1zyF+wfqTwFdRZJlKvcJBgPtwP8zwy03sEGPDfQaD4JtEGMsB6bcd/Vm3pCpg6jbIVwmBQmJbq2o0fX1Vkr+gDYvyMZ4juvk5pflPuBSZ1CA652T4N6RMm+9SYjUJnOxkMtP0iORWZbYY=
+  app: staging-gdzienaobiad
+  on:
+    repo: DominikWro/GdzieIdziemyDzisiajNaObiad
